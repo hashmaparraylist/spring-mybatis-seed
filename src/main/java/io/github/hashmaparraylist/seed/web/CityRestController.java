@@ -1,7 +1,9 @@
 package io.github.hashmaparraylist.seed.web;
 
 import io.github.hashmaparraylist.seed.domain.City;
+import io.github.hashmaparraylist.seed.domain.dto.CommonResponse;
 import io.github.hashmaparraylist.seed.mapper.CityMapper;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,8 +28,9 @@ public class CityRestController {
      * @return City 对象
      */
     @GetMapping("/cities")
-    public City getCity(@RequestParam("id") Long id) {
-        return this.cityMapper.selectCityById(id);
+    public ResponseEntity<CommonResponse<City>> getCity(@RequestParam("id") Long id) {
+        City city = this.cityMapper.selectCityById(id);
+        return ResponseEntity.ok(CommonResponse.ok(city));
     }
 
 }
