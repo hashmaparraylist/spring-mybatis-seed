@@ -4,7 +4,7 @@ import io.github.hashmaparraylist.seed.domain.City;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * TODO
+ * City Entity MyBatis Mapper
  *
  * @author
  * @date 2020/9/22
@@ -12,9 +12,9 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface CityMapper {
     /**
-     *
-     * @param id
-     * @return
+     * 根据 ID 获取 City 对象
+     * @param id ID
+     * @return City 对象
      */
     City selectCityById(Long id);
 }

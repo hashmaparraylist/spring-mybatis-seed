@@ -5,6 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+/**
+ * City Domain
+ * @author Sebastian Qu
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
