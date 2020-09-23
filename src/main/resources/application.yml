@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    schema:
+      - classpath:/META-INF/schema.sql
+    data:
+      - classpath:/META-INF/data.sql
+
+mybatis:
+  config-location: classpath:META-INF/mybatis-config.xml
+
