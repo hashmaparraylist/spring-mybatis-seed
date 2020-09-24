@@ -1,6 +1,7 @@
 package io.github.hashmaparraylist.seed.domain.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.springframework.http.HttpStatus;
